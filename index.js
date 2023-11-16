@@ -18,11 +18,7 @@ app.use(express.static(__dirname + "/html"));
 
 app.get("/", (req, res) => res.render("index"));
 
-app.get("/task1.htm", (req, res) => {
-    let {emotions} = require("./data");
-    res.locals.emotions = emotions;
-    res.render("task1");
-});
+app.use("/task1.htm", require ("./routes/task1Route"));
 
 app.get("/admin", (req, res) => {
     res.render("index", {layout: "admin"});
