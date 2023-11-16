@@ -1,7 +1,7 @@
 const express = require("express");
 const expressHbs = require("express-handlebars");
 const app = express();
-const port = 3001;
+const port = process.env.PORT || 3000;
 
 app.engine("hbs",
     expressHbs.engine({
