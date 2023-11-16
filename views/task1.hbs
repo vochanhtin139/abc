@@ -1,19 +1,4 @@
 <body>
-    <!--header-->
-    <nav class="navbar navbar-default navbar-static-top navbar-inverse">
-        <div class="container">
-            <ul class="nav navbar-nav">
-                <li>
-                    <a href="index.htm"><span class="glyphicon glyphicon-home"></span> Home</a>
-                </li>
-                <li class="active"><a href="task1.htm">1. Inspiring Quotes</a></li>
-                <li><a href="task2.htm">2. Jars Saving</a></li>
-                <li><a href="task3.htm">3. TV Sales</a></li>
-                <li><a href="task4.htm">4. Zodiac Characteristics</a></li>
-            </ul>
-        </div>
-    </nav>
-    <!--/header-->
     <!--contain-->
     <div class="container">
         <h1 class="text-center">Inspiring Quotes</h1>
@@ -21,10 +6,11 @@
 
             {{#each emotions}}
             <div class="col-md-3">
-                <a href="">
+                <a href="#">
                     <img src="images{{imagePath}}" 
                         alt="{{title}}" 
-                        class="img-circle img-thumbnail">
+                        class="img-circle img-thumbnail"
+                        onclick="changeQuote('images{{quotePath}}')">
                     <h2>{{title}}</h2>
                 </a>
             </div>
@@ -32,13 +18,15 @@
 
         </div>
         <div class="row text-center">
-            <img class="img-thumbnail" src="images/task1/default.jpg" />
+            <img class="img-thumbnail" src="images/task1/default.jpg" id="quote"/>
         </div>
     </div>
     <!--/contain-->
-    <!--footer-->
-    <footer class="container-fluid text-center">
-        Copyright &copy; 2023 by 21127182 - Vo Chanh Tin
-    </footer>
-    <!--/footer-->
+
+    <script>
+        function changeQuote(quotePath) {
+            console.log(quotePath);
+            document.querySelector('#quote').src = quotePath;
+        }
+    </script>
 </body>
