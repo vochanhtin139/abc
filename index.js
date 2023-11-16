@@ -20,6 +20,10 @@ app.get("/", (req, res) => res.render("index"));
 
 app.use("/task1.htm", require ("./routes/task1Route"));
 
+app.use("/task2.htm", require ("./routes/task2Route"));
+
+app.use("/task3.htm", require ("./routes/task3Route"));
+
 app.get("/admin", (req, res) => {
     res.render("index", {layout: "admin"});
 });
