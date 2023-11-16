@@ -19,33 +19,16 @@
         <h1 class="text-center">Inspiring Quotes</h1>
         <div class="row destacados">
 
+            {{#each emotions}}
             <div class="col-md-3">
                 <a href="">
-                    <img src="images/task1/happy.jpeg" alt="happy" class="img-circle img-thumbnail">
-                    <h2>happy</h2>
+                    <img src="images{{imagePath}}" 
+                        alt="{{title}}" 
+                        class="img-circle img-thumbnail">
+                    <h2>{{title}}</h2>
                 </a>
             </div>
-
-            <div class="col-md-3">
-                <a href="">
-                    <img src="images/task1/sad.jpeg" alt="sad" class="img-circle img-thumbnail">
-                    <h2>sad</h2>
-                </a>
-            </div>
-
-            <div class="col-md-3">
-                <a href="">
-                    <img src="images/task1/stress.jpeg" alt="stress" class="img-circle img-thumbnail">
-                    <h2>stress</h2>
-                </a>
-            </div>
-
-            <div class="col-md-3">
-                <a href="">
-                    <img src="images/task1/angry.jpeg" alt="angry" class="img-circle img-thumbnail">
-                    <h2>angry</h2>
-                </a>
-            </div>
+            {{/each}}
 
         </div>
         <div class="row text-center">

@@ -9,6 +9,10 @@ app.get("/", (req, res) => res.render("index"));
 
 app.get("/task1.htm", (req, res) => res.render("task1"));
 
+app.get("/admin", (req, res) => {
+    res.render("index", {layout: "admin"});
+});
+
 app.engine("hbs",
     expressHbs.engine({
         layoutsDir: __dirname + "/views/layouts",
